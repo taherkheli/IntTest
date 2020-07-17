@@ -1,0 +1,33 @@
+
+When debugging an API project, the default launch profile is 'IIS Express' which means host it via IIS Express
+ 
+Alternately (preferable), we can choose the api project as the launch profile while debugging. This means we want to start it as a self hosted console application.
+This has the advantage that we can read the diagnostic messages in the vs debugger console e.g. "Now listening on: http://localhost:5120"
+
+The same is possible to set via debug props of the API proj. options:  IIS, proj, Azure Dev Spaces
+
+*************************************************************************************************************************************************************************
+
+We change proj file 
+
+<Project Sdk="Microsoft.NET.Sdk">
+to
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+this ensures that we get the best build experience and all teh features we need will be enabled
+
+*************************************************************************************************************************************************************************
+
+shadow copying enabled: (default)
+test will execute in a different directory than the build output
+
+we need to disable it so we do it via adding xunit settinsg json file
+
+lastly we add a ref to teh API project we will test against
+
+int test project is all set now
+
+*************************************************************************************************************************************************************************
+
+
+
