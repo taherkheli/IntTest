@@ -21,7 +21,7 @@ namespace TennisBookings.Merchandise.Api.IntegrationTests
 			var response = await _httpClient.GetAsync("/healthcheck");
 
 			Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-			//response.EnsureSuccessStatusCode();   //a shortcut if we dun care about the exact code (200) and care for a range only (200-209)
+			//response.EnsureSuccessStatusCode();   //a shortcut if we dun care about the exact code (200) and care for a range only (200-299)
 		}
 	}
 }
