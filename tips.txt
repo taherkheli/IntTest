@@ -29,5 +29,6 @@ int test project is all set now
 
 *************************************************************************************************************************************************************************
 
+health checks are typically needed when your services are running in a container or an orchestration environment like kubernetes 
 
 
